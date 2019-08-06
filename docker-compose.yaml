@@ -1,3 +1,19 @@
 ---
 
-# This file is mandatory if your're building a new container - please remove instead it if it's not needed
+version: '2'
+
+services:
+
+  lodview:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: pdnd-ontopia-lodview
+    image: teamdigitale/pdnd-ontopia-lodview
+    environment:
+      LODVIEW_SPARQLENDPOINT: "https://ontopia-virtuoso.dev.pdnd.italia.it/sparql"
+      LODVIEW_URISPACE: "https://w3id.org/italia"
+    stdin_open: true
+    tty: true
+    ports:
+      - 8080:8080/tcp
