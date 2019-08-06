@@ -1,1 +1,5 @@
-# This file is mandatory if your're building a new container - please remove instead it if it's not needed
+FROM linkeddatacenter/lodview:1.1.0
+
+COPY webvowl/webvowl_1.0.6.war /tmp
+
+RUN mv /tmp/webvowl_1.0.6.war /usr/local/tomcat/webapps/webvowl.war
