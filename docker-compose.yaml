@@ -13,6 +13,9 @@ services:
     environment:
       LODVIEW_SPARQLENDPOINT: "https://ontopia-virtuoso.dev.pdnd.italia.it/sparql"
       LODVIEW_URISPACE: "https://w3id.org/italia"
+      LODVIEW_PUBLICURLPREFIX: https://ontopia-lodview.dev.pdnd.italia.it/
+      LODVIEW_HOMEURL: https://ontopia-lodview.dev.pdnd.italia.it/
+      LODVIEW_HOME_TITLE: OntoPiA Lodview
     stdin_open: true
     tty: true
     ports:
